@@ -66,7 +66,7 @@ async function uploadSession() {
         false
       )
 
-      await archive.finalize()
+      archive.finalize()
 
       output.on("close", async() => {
 
@@ -339,6 +339,9 @@ app.post(
         req.file.path,
         "./session.zip"
       )
+
+      // delete temp upload
+      fs.unlinkSync(req.file.path)
 
       console.log(
         "✅ Session ZIP Received"
