@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium WhatsApp Pair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>WhatsApp Pairing</h1>
+
+    <p class="sub">
+      Premium Secure Login System
+    </p>
+
+    <input
+      type="number"
+      id="number"
+      placeholder="Enter WhatsApp Number"
+    />
+
+    <button onclick="generateCode()">
+      Generate Pair Code
+    </button>
+
+    <div id="status" class="status offline">
+      Waiting...
+    </div>
+
+    <div id="code" class="code">
+      ---- ----
+    </div>
+
+    <button onclick="copyCode()">
+      Copy Code
+    </button>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
